@@ -1,348 +1,39 @@
-/* =============================================================
-   ECO-MONITOR NAVBAR v1.0
-   Include this in every page:
-   <script src="navbar.js"></script>
-   
-   Then add this where you want the navbar:
-   <div id="eco-navbar"></div>
-   
-   And add padding to your body/container:
-   margin-top: 60px (or padding-top: 60px)
-   ============================================================= */
-
-(function(){
-
-var CURRENT_PAGE = window.location.pathname.split('/').pop() || 'home.html';
-
-var NAV_HTML = `
-<nav class="eco-nav" id="ecoNav">
-  <div class="eco-nav__inner">
-
-    <a href="home.html" class="eco-nav__logo">
-      <span class="eco-nav__logo-icon">🌍</span>
-      <span class="eco-nav__logo-text">Earth Vision AI</span>
-    </a>
-
-    <div class="eco-nav__links" id="navLinks">
-
-      <a href="home.html" class="eco-nav__link" data-page="home.html">Home</a>
-
-      <a href="About.html" class="eco-nav__link" data-page="About.html">About</a>
-
-      <a href="sdg-action.html" class="eco-nav__link" data-page="sdg-action.html">SDG Action</a>
-
-      <a href="EarthScan.html" class="eco-nav__link" data-page="EarthScan.html" style="color:#22c55e;font-weight:700">🛰 Earth Scan</a>
-
-      <div class="eco-nav__dropdown">
-        <button class="eco-nav__link eco-nav__drop-btn">
-          Explore <span class="eco-nav__arrow">▾</span>
-        </button>
-        <div class="eco-nav__drop-menu">
-          <a href="index.html" data-page="index.html">🌳 Green Cover</a>
-          <a href="AQI.html" data-page="AQI.html">🌫 Air Quality</a>
-          <a href="Climate.html" data-page="Climate.html">🌡 Climate</a>
-          <a href="WaterReserves.html" data-page="WaterReserves.html">💧 Water</a>
-          <a href="humanpopulation.html" data-page="humanpopulation.html">👥 Population</a>
-          <a href="Satellite.html" data-page="Satellite.html">🛰 Satellite Photos</a>
-          <a href="Compare.html" data-page="Compare.html">🧠 AI Compare</a>
-          <a href="Disasters.html" data-page="Disasters.html">🌪 Disaster Center</a>
-          <a href="Carbon.html" data-page="Carbon.html">🌎 Carbon Dashboard</a>
-          <a href="City_AI_Pulse_V5_Rainfall.html" data-page="City_AI_Pulse_V5_Rainfall.html">🏙 City Pulse</a>
-        </div>
-      </div>
-
-      <div class="eco-nav__dropdown">
-        <button class="eco-nav__link eco-nav__drop-btn">
-          AI Tools <span class="eco-nav__arrow">▾</span>
-        </button>
-        <div class="eco-nav__drop-menu">
-          <a href="Dashboard.html" data-page="Dashboard.html">📊 Report &amp; Ranking</a>
-          <a href="TreePlanting.html" data-page="TreePlanting.html">🌳 Tree Planting AI</a>
-          <a href="PlantHere.html" data-page="PlantHere.html">📍 Plant Near Me</a>
-          <a href="TimeMachine.html" data-page="TimeMachine.html">📊 Compare Years</a>
-          <a href="TimeTravel.html" data-page="TimeTravel.html">🕰 Watch City Change</a>
-          <a href="chatbot.html" data-page="chatbot.html">🤖 AI Chatbot</a>
-          <a href="Report.html" data-page="Report.html">📄 PDF Report</a>
-          <a href="Impact.html" data-page="Impact.html">🏅 My Impact</a>
-          <a href="Agriculture.html" data-page="Agriculture.html">🌾 Agriculture AI</a>
-    <a href="Biodiversity.html" data-page="Biodiversity.html">🦁 Biodiversity</a>
-          <a href="Community.html" data-page="Community.html">🤝 Community Missions</a>
-        </div>
-      </div>
-
-    </div>
-
-    <button class="eco-nav__hamburger" id="navHamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-
-  </div>
-
-  <div class="eco-nav__mobile" id="navMobile">
-    <a href="home.html" data-page="home.html">🏠 Home</a>
-    <a href="EarthScan.html" data-page="EarthScan.html" style="color:#22c55e;font-weight:700">🛰 Earth Scan</a>
-    <a href="About.html" data-page="About.html">ℹ️ About</a>
-    <a href="sdg-action.html" data-page="sdg-action.html">🌍 SDG Action</a>
-    <div class="eco-nav__mob-group">Explore</div>
-    <a href="index.html" data-page="index.html">🌳 Green Cover</a>
-    <a href="AQI.html" data-page="AQI.html">🌫 Air Quality</a>
-    <a href="Climate.html" data-page="Climate.html">🌡 Climate</a>
-    <a href="WaterReserves.html" data-page="WaterReserves.html">💧 Water</a>
-    <a href="humanpopulation.html" data-page="humanpopulation.html">👥 Population</a>
-    <a href="Satellite.html" data-page="Satellite.html">🛰 Satellite Photos</a>
-    <a href="Compare.html" data-page="Compare.html">🧠 AI Compare</a>
-    <a href="Disasters.html" data-page="Disasters.html">🌪 Disaster Center</a>
-    <a href="Carbon.html" data-page="Carbon.html">🌎 Carbon Dashboard</a>
-    <a href="City_AI_Pulse_V5_Rainfall.html" data-page="City_AI_Pulse_V5_Rainfall.html">🏙 City Pulse</a>
-    <div class="eco-nav__mob-group">AI Tools</div>
-    <a href="Dashboard.html" data-page="Dashboard.html">📊 Report &amp; Ranking</a>
-    <a href="TreePlanting.html" data-page="TreePlanting.html">🌳 Tree Planting AI</a>
-    <a href="PlantHere.html" data-page="PlantHere.html">📍 Plant Near Me</a>
-    <a href="TimeMachine.html" data-page="TimeMachine.html">📊 Compare Years</a>
-    <a href="TimeTravel.html" data-page="TimeTravel.html">🕰 Watch City Change</a>
-    <a href="chatbot.html" data-page="chatbot.html">🤖 AI Chatbot</a>
-    <a href="Report.html" data-page="Report.html">📄 PDF Report</a>
-    <a href="Impact.html" data-page="Impact.html">🏅 My Impact</a>
-    <a href="Biodiversity.html" data-page="Biodiversity.html">🦁 Biodiversity</a>
-    <a href="Community.html" data-page="Community.html">🤝 Community Missions</a>
-  </div>
-</nav>
-`;
-
-var NAV_CSS = `
-.eco-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: white;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-  z-index: 99999;
-  font-family: 'Segoe UI', Arial, sans-serif;
-}
-.eco-nav__inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 24px;
-}
-
-/* LOGO */
-.eco-nav__logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-.eco-nav__logo-icon {
-  font-size: 26px;
-}
-.eco-nav__logo-text {
-  font-size: 18px;
-  font-weight: 800;
-  color: #22c55e;
-  letter-spacing: -0.5px;
-}
-
-/* LINKS */
-.eco-nav__links {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.eco-nav__link {
-  text-decoration: none;
-  color: #374151;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: all 0.2s;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-}
-.eco-nav__link:hover {
-  background: #f0fdf4;
-  color: #2e7d32;
-}
-.eco-nav__link.active {
-  background: #dcfce7;
-  color: #16a34a;
-}
-
-/* DROPDOWN */
-.eco-nav__dropdown {
-  position: relative;
-}
-.eco-nav__arrow {
-  font-size: 10px;
-  margin-left: 2px;
-  opacity: 0.5;
-}
-.eco-nav__drop-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
-  border: 1px solid #f0f0f0;
-  padding: 8px;
-  min-width: 200px;
-  z-index: 100;
-}
-.eco-nav__dropdown:hover .eco-nav__drop-menu {
-  display: block;
-}
-.eco-nav__drop-menu a {
-  display: block;
-  text-decoration: none;
-  color: #374151;
-  font-size: 14px;
-  font-weight: 500;
-  padding: 10px 14px;
-  border-radius: 8px;
-  transition: all 0.15s;
-}
-.eco-nav__drop-menu a:hover {
-  background: #f0fdf4;
-  color: #2e7d32;
-}
-.eco-nav__drop-menu a.active {
-  background: #dcfce7;
-  color: #16a34a;
-  font-weight: 600;
-}
-
-/* HAMBURGER */
-.eco-nav__hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-.eco-nav__hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #374151;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-.eco-nav__hamburger.open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.eco-nav__hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.eco-nav__hamburger.open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* MOBILE MENU */
-.eco-nav__mobile {
-  display: none;
-  background: white;
-  border-top: 1px solid #f0f0f0;
-  padding: 12px 24px 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-.eco-nav__mobile.open {
-  display: block;
-}
-.eco-nav__mobile a {
-  display: block;
-  text-decoration: none;
-  color: #374151;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 12px 14px;
-  border-radius: 8px;
-  transition: 0.15s;
-}
-.eco-nav__mobile a:hover {
-  background: #f0fdf4;
-  color: #2e7d32;
-}
-.eco-nav__mobile a.active {
-  background: #dcfce7;
-  color: #16a34a;
-  font-weight: 600;
-}
-.eco-nav__mob-group {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #9ca3af;
-  padding: 16px 14px 6px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .eco-nav__links {
-    display: none;
-  }
-  .eco-nav__hamburger {
-    display: flex;
-  }
-}
-`;
-
-// Inject CSS
-var style = document.createElement('style');
-style.textContent = NAV_CSS;
-document.head.appendChild(style);
-
-// Inject navbar
-var target = document.getElementById('eco-navbar');
-if (target) {
-  target.innerHTML = NAV_HTML;
-} else {
-  // Auto-inject at start of body
-  document.body.insertAdjacentHTML('afterbegin', NAV_HTML);
-}
-
-// Highlight current page
-document.querySelectorAll('[data-page]').forEach(function(link) {
-  if (link.dataset.page === CURRENT_PAGE) {
-    link.classList.add('active');
-    // Also highlight parent dropdown button
-    var parent = link.closest('.eco-nav__dropdown');
-    if (parent) {
-      parent.querySelector('.eco-nav__drop-btn').classList.add('active');
-    }
-  }
-});
-
-// Hamburger toggle
-var hamburger = document.getElementById('navHamburger');
-var mobile = document.getElementById('navMobile');
-if (hamburger && mobile) {
-  hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('open');
-    mobile.classList.toggle('open');
+/* Common navbar for IPS Green Vision. */
+(function () {
+  "use strict";
+  var file = decodeURIComponent(location.pathname.split("/").pop() || "").toLowerCase();
+  var view = new URLSearchParams(location.search).get("view") || "home";
+  var items = [
+    { href: "About.html", label: "About", icon: "ℹ️", active: file === "about.html" },
+    { href: "sdg-action.html", label: "SDGs", icon: "🌍", active: file === "sdg-action.html" && view === "home" },
+    { href: "sdg-action.html?view=community", label: "Community", icon: "👥", active: file === "sdg-action.html" && view === "community" },
+    { href: "sdg-action.html?view=targets", label: "Green Targets", icon: "🎯", active: file === "sdg-action.html" && view === "targets" },
+    { href: "PlantHere.html", label: "Plant a Tree", icon: "🌳", active: file === "planthere.html" },
+    { href: "City_AI_Pulse_V5_Rainfall.html", label: "City Pulse AI", icon: "🛰️", active: file === "city_ai_pulse_v5_rainfall.html" }
+  ];
+  var links = items.map(function (item) {
+    return '<a class="sdg-nav__link' + (item.active ? ' is-active' : '') + '" href="' + item.href + '"' + (item.active ? ' aria-current="page"' : '') + '><span aria-hidden="true">' + item.icon + '</span><span>' + item.label + '</span></a>';
+  }).join("");
+  var markup = '<nav class="sdg-nav" aria-label="SDG navigation"><div class="sdg-nav__inner">' +
+    '<a class="sdg-nav__brand" href="sdg-action.html"><img class="sdg-nav__school-logo" src="indirapuram-public-school-logo.png" alt="Indirapuram Public School logo"><span class="sdg-nav__brand-copy"><strong><span class="sdg-nav__brand-dark">IPS</span> <span class="sdg-nav__brand-green">Green Vision</span></strong><small>Indirapuram Public School</small></span></a>' +
+    '<div class="sdg-nav__links" id="sdgNavLinks">' + links + '</div>' +
+    '<button class="sdg-nav__toggle" id="sdgNavToggle" type="button" aria-label="Open navigation" aria-controls="sdgNavLinks" aria-expanded="false"><span></span><span></span><span></span></button>' +
+    '</div></nav>';
+  var css = `
+    .sdg-nav{position:fixed;inset:0 0 auto 0;height:60px;z-index:99999;background:#fff;border-bottom:1px solid #d4e5d4;box-shadow:0 1px 3px rgba(15,31,15,.06);font-family:"DM Sans","Segoe UI",Arial,sans-serif}
+    .sdg-nav,.sdg-nav *{box-sizing:border-box}.sdg-nav__inner{height:100%;width:min(1400px,calc(100% - 48px));margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .sdg-nav__brand{display:flex;align-items:center;gap:9px;text-decoration:none;white-space:nowrap;font-family:Outfit,"Segoe UI",Arial,sans-serif}.sdg-nav__school-logo{width:40px;height:40px;object-fit:contain;border-radius:50%;background:#fff}.sdg-nav__brand-copy{display:grid;line-height:1.05}.sdg-nav__brand-copy strong{font-size:17px;font-weight:800}.sdg-nav__brand-copy small{margin-top:4px;color:#6b826b;font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.sdg-nav__brand-dark{color:#1a2e1a}.sdg-nav__brand-green{color:#16a34a}
+    .sdg-nav__links{display:flex;align-items:center;justify-content:center;gap:2px}.sdg-nav__link{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 14px;border-radius:10px;color:#8ca88c;text-decoration:none;font-size:13px;font-weight:600;transition:background .18s ease,color .18s ease}.sdg-nav__link:hover{background:#f0fdf4;color:#15803d}.sdg-nav__link.is-active{background:#dcfce7;color:#16a34a}
+    .sdg-nav__toggle{display:none;width:42px;height:42px;padding:10px;border:0;border-radius:10px;background:#dcfce7;cursor:pointer}.sdg-nav__toggle span{display:block;width:20px;height:2px;margin:4px auto;border-radius:2px;background:#15803d;transition:.18s ease}.sdg-nav__toggle.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}.sdg-nav__toggle.is-open span:nth-child(2){opacity:0}.sdg-nav__toggle.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    @media(max-width:850px){.sdg-nav__inner{width:calc(100% - 28px)}.sdg-nav__toggle{display:block}.sdg-nav__links{display:none;position:absolute;top:60px;left:0;right:0;padding:10px 14px 16px;flex-direction:column;align-items:stretch;background:#fff;border-bottom:1px solid #d4e5d4;box-shadow:0 12px 24px rgba(15,31,15,.1)}.sdg-nav__links.is-open{display:flex}.sdg-nav__link{min-height:44px}}
+  `;
+  var style = document.createElement("style"); style.textContent = css; document.head.appendChild(style);
+  var target = document.getElementById("eco-navbar");
+  if (target) target.innerHTML = markup; else document.body.insertAdjacentHTML("afterbegin", '<div id="eco-navbar">' + markup + '</div>');
+  var toggle = document.getElementById("sdgNavToggle"), menu = document.getElementById("sdgNavLinks");
+  if (toggle && menu) toggle.addEventListener("click", function () {
+    var open = toggle.getAttribute("aria-expanded") !== "true";
+    toggle.setAttribute("aria-expanded", String(open)); toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    toggle.classList.toggle("is-open", open); menu.classList.toggle("is-open", open);
   });
-  // Close on link click
-  mobile.querySelectorAll('a').forEach(function(link) {
-    link.addEventListener('click', function() {
-      hamburger.classList.remove('open');
-      mobile.classList.remove('open');
-    });
-  });
-}
-
 })();
-
-
