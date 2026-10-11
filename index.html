@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SDG Action Platform</title>
+<title>IPS Green Vision | Indirapuram Public School</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
@@ -37,23 +37,23 @@ const T = {
 };
 
 const SDGS = [
-  { id: 1, name: "NO\nPOVERTY", color: "#E5243B", desc: "End poverty in all its forms everywhere. Over 700 million people still live in extreme poverty, surviving on less than $2.15 a day.", icon: "🏠" },
-  { id: 2, name: "ZERO\nHUNGER", color: "#DDA63A", desc: "End hunger, achieve food security and improved nutrition and promote sustainable agriculture.", icon: "🌾" },
-  { id: 3, name: "GOOD HEALTH\nAND WELL-BEING", color: "#4C9F38", desc: "Ensure healthy lives and promote well-being for all at all ages.", icon: "❤️" },
-  { id: 4, name: "QUALITY\nEDUCATION", color: "#C5192D", desc: "Ensure inclusive and equitable quality education and promote lifelong learning opportunities.", icon: "📚" },
-  { id: 5, name: "GENDER\nEQUALITY", color: "#FF3A21", desc: "Achieve gender equality and empower all women and girls worldwide.", icon: "⚖️" },
-  { id: 6, name: "CLEAN WATER\nAND SANITATION", color: "#26BDE2", desc: "Ensure availability and sustainable management of water and sanitation for all.", icon: "💧" },
-  { id: 7, name: "AFFORDABLE AND\nCLEAN ENERGY", color: "#FCC30B", desc: "Ensure access to affordable, reliable, sustainable and modern energy for all.", icon: "⚡" },
-  { id: 8, name: "DECENT WORK AND\nECONOMIC GROWTH", color: "#A21942", desc: "Promote sustained, inclusive and sustainable economic growth and decent work.", icon: "📈" },
-  { id: 9, name: "INDUSTRY, INNOVATION\nAND INFRASTRUCTURE", color: "#FD6925", desc: "Build resilient infrastructure, promote inclusive industrialization and foster innovation.", icon: "🏗️" },
-  { id: 10, name: "REDUCED\nINEQUALITIES", color: "#DD1367", desc: "Reduce inequality within and among countries through policies and action.", icon: "🤝" },
-  { id: 11, name: "SUSTAINABLE CITIES\nAND COMMUNITIES", color: "#FD9D24", desc: "Make cities and human settlements inclusive, safe, resilient and sustainable.", icon: "🏙️" },
-  { id: 12, name: "RESPONSIBLE\nCONSUMPTION\nAND PRODUCTION", color: "#BF8B2E", desc: "Ensure sustainable consumption and production patterns globally.", icon: "♻️" },
-  { id: 13, name: "CLIMATE\nACTION", color: "#3F7E44", desc: "Take urgent action to combat climate change and its impacts.", icon: "🌍" },
-  { id: 14, name: "LIFE\nBELOW WATER", color: "#0A97D9", desc: "Conserve and sustainably use the oceans, seas and marine resources.", icon: "🐠" },
-  { id: 15, name: "LIFE\nON LAND", color: "#56C02B", desc: "Protect, restore and promote sustainable use of terrestrial ecosystems.", icon: "🌳" },
-  { id: 16, name: "PEACE, JUSTICE\nAND STRONG\nINSTITUTIONS", color: "#00689D", desc: "Promote peaceful and inclusive societies for sustainable development.", icon: "🕊️" },
-  { id: 17, name: "PARTNERSHIPS\nFOR THE GOALS", color: "#19486A", desc: "Strengthen the means of implementation and revitalize the global partnership.", icon: "🌐" },
+  { id: 1, name: "NO\nPOVERTY", color: "#E5243B", desc: "End poverty in all its forms everywhere. Over 700 million people still live in extreme poverty, surviving on less than $2.15 a day.", icon: "ðŸ " },
+  { id: 2, name: "ZERO\nHUNGER", color: "#DDA63A", desc: "End hunger, achieve food security and improved nutrition and promote sustainable agriculture.", icon: "ðŸŒ¾" },
+  { id: 3, name: "GOOD HEALTH\nAND WELL-BEING", color: "#4C9F38", desc: "Ensure healthy lives and promote well-being for all at all ages.", icon: "â¤ï¸" },
+  { id: 4, name: "QUALITY\nEDUCATION", color: "#C5192D", desc: "Ensure inclusive and equitable quality education and promote lifelong learning opportunities.", icon: "ðŸ“š" },
+  { id: 5, name: "GENDER\nEQUALITY", color: "#FF3A21", desc: "Achieve gender equality and empower all women and girls worldwide.", icon: "âš–ï¸" },
+  { id: 6, name: "CLEAN WATER\nAND SANITATION", color: "#26BDE2", desc: "Ensure availability and sustainable management of water and sanitation for all.", icon: "ðŸ’§" },
+  { id: 7, name: "AFFORDABLE AND\nCLEAN ENERGY", color: "#FCC30B", desc: "Ensure access to affordable, reliable, sustainable and modern energy for all.", icon: "âš¡" },
+  { id: 8, name: "DECENT WORK AND\nECONOMIC GROWTH", color: "#A21942", desc: "Promote sustained, inclusive and sustainable economic growth and decent work.", icon: "ðŸ“ˆ" },
+  { id: 9, name: "INDUSTRY, INNOVATION\nAND INFRASTRUCTURE", color: "#FD6925", desc: "Build resilient infrastructure, promote inclusive industrialization and foster innovation.", icon: "ðŸ—ï¸" },
+  { id: 10, name: "REDUCED\nINEQUALITIES", color: "#DD1367", desc: "Reduce inequality within and among countries through policies and action.", icon: "ðŸ¤" },
+  { id: 11, name: "SUSTAINABLE CITIES\nAND COMMUNITIES", color: "#FD9D24", desc: "Make cities and human settlements inclusive, safe, resilient and sustainable.", icon: "ðŸ™ï¸" },
+  { id: 12, name: "RESPONSIBLE\nCONSUMPTION\nAND PRODUCTION", color: "#BF8B2E", desc: "Ensure sustainable consumption and production patterns globally.", icon: "â™»ï¸" },
+  { id: 13, name: "CLIMATE\nACTION", color: "#3F7E44", desc: "Take urgent action to combat climate change and its impacts.", icon: "ðŸŒ" },
+  { id: 14, name: "LIFE\nBELOW WATER", color: "#0A97D9", desc: "Conserve and sustainably use the oceans, seas and marine resources.", icon: "ðŸ " },
+  { id: 15, name: "LIFE\nON LAND", color: "#56C02B", desc: "Protect, restore and promote sustainable use of terrestrial ecosystems.", icon: "ðŸŒ³" },
+  { id: 16, name: "PEACE, JUSTICE\nAND STRONG\nINSTITUTIONS", color: "#00689D", desc: "Promote peaceful and inclusive societies for sustainable development.", icon: "ðŸ•Šï¸" },
+  { id: 17, name: "PARTNERSHIPS\nFOR THE GOALS", color: "#19486A", desc: "Strengthen the means of implementation and revitalize the global partnership.", icon: "ðŸŒ" },
 ];
 
 // SVG icon components for each SDG (white silhouette style matching UN official icons)
@@ -240,11 +240,112 @@ function SDGIcon({ id, size = 80 }) {
   return icons[id] || null;
 }
 
-// ─── storage ───
+// â”€â”€â”€ storage â”€â”€â”€
 function load(key) { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : null; } catch { return null; } }
 function save(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch {} }
 
-// ─── components ───
+function formatPostDate(post) {
+  if (post.createdAt) {
+    return new Date(post.createdAt).toLocaleString(undefined, {
+      day: "numeric", month: "short", year: "numeric", hour: "numeric", minute: "2-digit"
+    });
+  }
+  return post.time || "";
+}
+
+function compressImage(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error("Could not read this picture."));
+    reader.onload = () => {
+      const image = new Image();
+      image.onerror = () => reject(new Error("This picture format could not be opened."));
+      image.onload = () => {
+        const maxSide = 1200;
+        const scale = Math.min(1, maxSide / Math.max(image.width, image.height));
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.max(1, Math.round(image.width * scale));
+        canvas.height = Math.max(1, Math.round(image.height * scale));
+        canvas.getContext("2d").drawImage(image, 0, 0, canvas.width, canvas.height);
+        resolve(canvas.toDataURL("image/jpeg", 0.78));
+      };
+      image.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+function PostInteractions({ post, onUpdate, responseLabel = "Comment" }) {
+  const [showResponse, setShowResponse] = useState(false);
+  const [response, setResponse] = useState("");
+  const comments = Array.isArray(post.comments) ? post.comments : [];
+
+  const toggleLike = () => {
+    const liked = !post.likedByYou;
+    onUpdate(post.id, {
+      likedByYou: liked,
+      likes: Math.max(0, (Number(post.likes) || 0) + (liked ? 1 : -1)),
+    });
+  };
+
+  const submitResponse = () => {
+    if (!response.trim()) return;
+    onUpdate(post.id, {
+      comments: [...comments, {
+        id: Date.now().toString(),
+        user: "You",
+        text: response.trim(),
+        createdAt: new Date().toISOString(),
+      }],
+    });
+    setResponse("");
+    setShowResponse(false);
+  };
+
+  return (
+    <div>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        <button type="button" onClick={toggleLike} style={{ border: "none", background: post.likedByYou ? "#FEE2E2" : T.bg, color: post.likedByYou ? "#DC2626" : T.muted, borderRadius: 8, padding: "7px 11px", cursor: "pointer", fontSize: 13, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }}>
+          {post.likedByYou ? "â™¥" : "â™¡"} {post.likes || 0}
+        </button>
+        <button type="button" onClick={() => setShowResponse(!showResponse)} style={{ border: "none", background: T.bg, color: T.textSec, borderRadius: 8, padding: "7px 11px", cursor: "pointer", fontSize: 13, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }}>
+          ðŸ’¬ {responseLabel}{comments.length ? ` (${comments.length})` : ""}
+        </button>
+      </div>
+
+      {comments.length > 0 && (
+        <div style={{ marginTop: 12, display: "flex", flexDirection: "column", gap: 8 }}>
+          {comments.map(comment => (
+            <div key={comment.id} style={{ background: T.bg, border: `1px solid ${T.borderLight}`, borderRadius: 10, padding: "10px 12px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, marginBottom: 4 }}>
+                <strong style={{ color: T.text, fontSize: 12, fontFamily: "'DM Sans',sans-serif" }}>{comment.user || "You"}</strong>
+                <span style={{ color: T.muted, fontSize: 11, fontFamily: "'DM Sans',sans-serif" }}>{formatPostDate(comment)}</span>
+              </div>
+              <div style={{ color: T.textSec, fontSize: 13, lineHeight: 1.5, fontFamily: "'DM Sans',sans-serif" }}>{comment.text}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {showResponse && (
+        <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
+          <input value={response} onChange={e => setResponse(e.target.value)} onKeyDown={e => e.key === "Enter" && submitResponse()} autoFocus placeholder={`Write a ${responseLabel.toLowerCase()}...`} style={{ flex: 1, minWidth: 0, padding: "10px 12px", border: `1px solid ${T.border}`, borderRadius: 9, background: "#fff", color: T.text, outline: "none", fontSize: 13, fontFamily: "'DM Sans',sans-serif" }} />
+          <button type="button" onClick={submitResponse} disabled={!response.trim()} style={{ border: "none", borderRadius: 9, padding: "0 15px", background: response.trim() ? T.green : T.muted, color: "#fff", cursor: response.trim() ? "pointer" : "not-allowed", fontWeight: 700, fontFamily: "'DM Sans',sans-serif" }}>Post</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+const EASY_GREEN_TARGETS = [
+  { id: "green-6-water", text: "Turn off the tap while brushing your teeth", done: false, sdg: 6 },
+  { id: "green-7-energy", text: "Switch off lights and fans when leaving a room", done: false, sdg: 7 },
+  { id: "green-12-reuse", text: "Use a reusable bottle or cloth shopping bag", done: false, sdg: 12 },
+  { id: "green-13-travel", text: "Walk or cycle for one short journey", done: false, sdg: 13 },
+  { id: "green-15-plant", text: "Plant or care for one tree or native plant", done: false, sdg: 15 },
+];
+
+// â”€â”€â”€ components â”€â”€â”€
 function Btn({ children, color = T.green, outline, full, small, onClick, disabled }) {
   return (
     <button onClick={disabled ? undefined : onClick} style={{
@@ -274,13 +375,13 @@ function Toast({ msg, onClose }) {
   useEffect(() => { const t = setTimeout(onClose, 3000); return () => clearTimeout(t); }, [onClose]);
   return (
     <div style={{ position: "fixed", top: 20, right: 20, zIndex: 2000, background: T.darkSec, color: "#fff", borderRadius: 12, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10, boxShadow: T.shadowLg, animation: "fadeIn .3s ease", maxWidth: 340 }}>
-      <span style={{ fontSize: 18 }}>{msg.icon || "✅"}</span>
+      <span style={{ fontSize: 18 }}>{msg.icon || "âœ…"}</span>
       <span style={{ fontSize: 14, fontFamily: "'DM Sans',sans-serif" }}>{msg.text}</span>
     </div>
   );
 }
 
-// ─── home page ───
+// â”€â”€â”€ home page â”€â”€â”€
 function HomePage({ onSelectSDG }) {
   return (
     <div style={{ maxWidth: 1100, margin: "0 auto", padding: "32px 28px 60px" }}>
@@ -289,10 +390,10 @@ function HomePage({ onSelectSDG }) {
         background: "linear-gradient(135deg, #0F1F0F, #1A3A1A, #15803D)",
         borderRadius: 20, padding: "48px 36px", marginBottom: 36, position: "relative", overflow: "hidden",
       }}>
-        <div style={{ position: "absolute", top: -20, right: -20, fontSize: 120, opacity: 0.08 }}>🌍</div>
+        <div style={{ position: "absolute", top: -20, right: -20, fontSize: 120, opacity: 0.08 }}>ðŸŒ</div>
         <div style={{ position: "relative", zIndex: 1, maxWidth: 600 }}>
           <div style={{ display: "inline-block", background: "rgba(255,255,255,.1)", borderRadius: 8, padding: "5px 14px", marginBottom: 16 }}>
-            <span style={{ fontSize: 13, color: "#86EFAC", fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }}>🌱 17 Goals to Transform Our World</span>
+            <span style={{ fontSize: 13, color: "#86EFAC", fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }}>ðŸŒ± 17 Goals to Transform Our World</span>
           </div>
           <h1 style={{ margin: "0 0 14px", fontSize: 36, fontWeight: 800, color: "#fff", fontFamily: "'Outfit',sans-serif", lineHeight: 1.15, letterSpacing: "-.5px" }}>
             Sustainable Development Goals
@@ -329,10 +430,12 @@ function HomePage({ onSelectSDG }) {
   );
 }
 
-// ─── SDG detail page ───
-function SDGPage({ sdg, posts, onPost, onBack }) {
+// â”€â”€â”€ SDG detail page â”€â”€â”€
+function SDGPage({ sdg, posts, onPost, onUpdatePost, onBack }) {
   const [desc, setDesc] = useState("");
   const [fileName, setFileName] = useState("");
+  const [imageData, setImageData] = useState("");
+  const [fileError, setFileError] = useState("");
   const [uploading, setUploading] = useState(false);
   const fileRef = useRef(null);
   const sdgPosts = posts.filter(p => p.sdgId === sdg.id);
@@ -341,13 +444,31 @@ function SDGPage({ sdg, posts, onPost, onBack }) {
     if (!desc.trim()) return;
     setUploading(true);
     await new Promise(r => setTimeout(r, 1500));
-    onPost({ id: Date.now().toString(), sdgId: sdg.id, user: "You", text: desc.trim(), fileName: fileName || null, time: "Just now", likes: 0, type: fileName ? "photo" : "text" });
-    setDesc(""); setFileName(""); setUploading(false);
+    const createdAt = new Date().toISOString();
+    onPost({ id: Date.now().toString(), sdgId: sdg.id, user: "You", text: desc.trim(), fileName: fileName || null, imageData: imageData || null, createdAt, likes: 0, type: imageData ? "photo" : "text" });
+    setDesc(""); setFileName(""); setImageData(""); setFileError("");
+    if (fileRef.current) fileRef.current.value = "";
+    setUploading(false);
+  };
+
+  const handleFile = async (event) => {
+    const file = event.target.files?.[0];
+    setFileError("");
+    if (!file) { setFileName(""); setImageData(""); return; }
+    if (!file.type.startsWith("image/")) {
+      setFileName(""); setImageData(""); setFileError("Please choose an image file."); return;
+    }
+    try {
+      setFileName(file.name);
+      setImageData(await compressImage(file));
+    } catch (error) {
+      setFileName(""); setImageData(""); setFileError(error.message);
+    }
   };
 
   return (
     <div style={{ maxWidth: 800, margin: "0 auto", padding: "28px 28px 60px" }}>
-      <button onClick={onBack} style={{ background: T.greenLight, border: "none", color: T.green, padding: "8px 18px", borderRadius: 10, fontSize: 14, fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", marginBottom: 20 }}>← Back to Goals</button>
+      <button onClick={onBack} style={{ background: T.greenLight, border: "none", color: T.green, padding: "8px 18px", borderRadius: 10, fontSize: 14, fontWeight: 600, cursor: "pointer", fontFamily: "'DM Sans',sans-serif", marginBottom: 20 }}>â† Back to Goals</button>
 
       {/* SDG Header */}
       <div style={{ background: sdg.color, borderRadius: 18, padding: "32px 28px", marginBottom: 28, position: "relative", overflow: "hidden" }}>
@@ -364,7 +485,7 @@ function SDGPage({ sdg, posts, onPost, onBack }) {
       {/* Upload form */}
       <div style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 16, padding: "24px", marginBottom: 28, boxShadow: T.shadow }}>
         <h2 style={{ margin: "0 0 6px", fontSize: 18, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif" }}>Share Your Action</h2>
-        <p style={{ margin: "0 0 18px", fontSize: 14, color: T.textSec, fontFamily: "'DM Sans',sans-serif" }}>Upload a photo or video of what you did for this goal</p>
+        <p style={{ margin: "0 0 18px", fontSize: 14, color: T.textSec, fontFamily: "'DM Sans',sans-serif" }}>Upload a photo and describe what you did for this goal</p>
 
         {/* File upload */}
         <div onClick={() => fileRef.current?.click()} style={{
@@ -372,21 +493,23 @@ function SDGPage({ sdg, posts, onPost, onBack }) {
           padding: "28px 20px", textAlign: "center", cursor: "pointer", marginBottom: 16,
           background: fileName ? sdg.color + "08" : T.bg, transition: "all .2s",
         }}>
-          <input ref={fileRef} type="file" accept="image/*,video/*" style={{ display: "none" }} onChange={e => setFileName(e.target.files?.[0]?.name || "")} />
+          <input ref={fileRef} type="file" accept="image/*" style={{ display: "none" }} onChange={handleFile} />
           {fileName ? (
             <div>
-              <div style={{ fontSize: 28, marginBottom: 8 }}>✅</div>
+               {imageData && <img src={imageData} alt="Selected action" style={{ display: "block", width: "100%", maxHeight: 260, objectFit: "cover", borderRadius: 10, marginBottom: 12 }} />}
+               <div style={{ fontSize: 28, marginBottom: 8 }}>âœ…</div>
               <div style={{ fontSize: 14, fontWeight: 600, color: sdg.color, fontFamily: "'DM Sans',sans-serif" }}>{fileName}</div>
               <div style={{ fontSize: 12, color: T.muted, fontFamily: "'DM Sans',sans-serif", marginTop: 4 }}>Click to change file</div>
             </div>
           ) : (
             <div>
-              <div style={{ fontSize: 28, marginBottom: 8 }}>📸</div>
-              <div style={{ fontSize: 14, fontWeight: 600, color: T.text, fontFamily: "'DM Sans',sans-serif" }}>Click to upload photo or video</div>
-              <div style={{ fontSize: 12, color: T.muted, fontFamily: "'DM Sans',sans-serif", marginTop: 4 }}>JPG, PNG, MP4 supported</div>
+              <div style={{ fontSize: 28, marginBottom: 8 }}>ðŸ“¸</div>
+              <div style={{ fontSize: 14, fontWeight: 600, color: T.text, fontFamily: "'DM Sans',sans-serif" }}>Click to upload a photo</div>
+               <div style={{ fontSize: 12, color: T.muted, fontFamily: "'DM Sans',sans-serif", marginTop: 4 }}>JPG, PNG and other image formats supported</div>
             </div>
           )}
         </div>
+        {fileError && <div style={{ color: "#DC2626", fontSize: 13, fontFamily: "'DM Sans',sans-serif", margin: "-8px 0 14px" }}>{fileError}</div>}
 
         {/* Description */}
         <textarea value={desc} onChange={e => setDesc(e.target.value)} placeholder="Describe what you did for this goal..." rows={3} style={{
@@ -396,7 +519,7 @@ function SDGPage({ sdg, posts, onPost, onBack }) {
         }} />
 
         <Btn color={sdg.color} full onClick={handleUpload} disabled={!desc.trim() || uploading}>
-          {uploading ? "Uploading..." : "🌱 Share Your Action"}
+          {uploading ? "Uploading..." : "ðŸŒ± Share Your Action"}
         </Btn>
       </div>
 
@@ -416,18 +539,15 @@ function SDGPage({ sdg, posts, onPost, onBack }) {
                   <div style={{ width: 36, height: 36, borderRadius: "50%", background: sdg.color + "20", display: "flex", alignItems: "center", justifyContent: "center", color: sdg.color, fontSize: 14, fontWeight: 700, fontFamily: "'Outfit',sans-serif" }}>{p.user.charAt(0)}</div>
                   <div>
                     <div style={{ fontSize: 14, fontWeight: 600, color: T.text, fontFamily: "'DM Sans',sans-serif" }}>{p.user}</div>
-                    <div style={{ fontSize: 12, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>{p.time}</div>
+                    <div style={{ fontSize: 12, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>{formatPostDate(p)}</div>
                   </div>
                 </div>
-                {p.type === "photo" && <span style={{ fontSize: 11, background: T.greenLight, color: T.green, padding: "3px 10px", borderRadius: 6, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }}>📸 Photo</span>}
+                {p.type === "photo" && <span style={{ fontSize: 11, background: T.greenLight, color: T.green, padding: "3px 10px", borderRadius: 6, fontFamily: "'DM Sans',sans-serif", fontWeight: 600 }}>ðŸ“¸ Photo</span>}
               </div>
               <p style={{ margin: "0 0 10px", fontSize: 14, color: T.text, lineHeight: 1.6, fontFamily: "'DM Sans',sans-serif" }}>{p.text}</p>
-              {p.fileName && <div style={{ fontSize: 12, color: sdg.color, fontFamily: "'DM Sans',sans-serif", marginBottom: 8 }}>📎 {p.fileName}</div>}
-              <div style={{ display: "flex", gap: 16 }}>
-                <span style={{ fontSize: 13, color: T.muted, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>❤️ {p.likes}</span>
-                <span style={{ fontSize: 13, color: T.muted, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>💬 Reply</span>
-                <span style={{ fontSize: 13, color: T.muted, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>🔗 Share</span>
-              </div>
+              {p.imageData && <img src={p.imageData} alt={`Action shared for SDG ${p.sdgId}`} style={{ display: "block", width: "100%", maxHeight: 420, objectFit: "cover", borderRadius: 12, marginBottom: 10 }} />}
+              {p.fileName && <div style={{ fontSize: 12, color: sdg.color, fontFamily: "'DM Sans',sans-serif", marginBottom: 8 }}>ðŸ“Ž {p.fileName}</div>}
+              <PostInteractions post={p} onUpdate={onUpdatePost} responseLabel="Reply" />
             </div>
           ))}
         </div>
@@ -436,16 +556,16 @@ function SDGPage({ sdg, posts, onPost, onBack }) {
   );
 }
 
-// ─── community page ───
-function CommunityPage({ posts }) {
+// â”€â”€â”€ community page â”€â”€â”€
+function CommunityPage({ posts, onUpdatePost }) {
   return (
     <div style={{ maxWidth: 700, margin: "0 auto", padding: "28px 28px 60px" }}>
-      <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>🌍 Community</h1>
+      <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>ðŸŒ Community</h1>
       <p style={{ fontSize: 15, color: T.textSec, fontFamily: "'DM Sans',sans-serif", marginBottom: 24 }}>See what people around the world are doing for the SDGs</p>
 
       {posts.length === 0 ? (
         <div style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 14, padding: "42px 20px", textAlign: "center", boxShadow: T.shadow }}>
-          <div style={{ fontSize: 36, marginBottom: 10 }}>🌱</div>
+          <div style={{ fontSize: 36, marginBottom: 10 }}>ðŸŒ±</div>
           <p style={{ color: T.textSec, fontSize: 14, fontFamily: "'DM Sans',sans-serif", margin: 0 }}>No community actions have been shared yet.</p>
         </div>
       ) : <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -458,20 +578,17 @@ function CommunityPage({ posts }) {
                   <div style={{ width: 40, height: 40, borderRadius: "50%", background: sdg.color + "20", display: "flex", alignItems: "center", justifyContent: "center", color: sdg.color, fontSize: 16, fontWeight: 700, fontFamily: "'Outfit',sans-serif" }}>{p.user.charAt(0)}</div>
                   <div>
                     <div style={{ fontSize: 15, fontWeight: 600, color: T.text, fontFamily: "'DM Sans',sans-serif" }}>{p.user}</div>
-                    <div style={{ fontSize: 12, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>{p.time}</div>
+                    <div style={{ fontSize: 12, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>{formatPostDate(p)}</div>
                   </div>
                 </div>
                 <SDGBadge sdg={sdg} small />
               </div>
               <p style={{ margin: "0 0 12px", fontSize: 15, color: T.text, lineHeight: 1.6, fontFamily: "'DM Sans',sans-serif" }}>{p.text}</p>
+              {p.imageData && <img src={p.imageData} alt={`Action shared for SDG ${p.sdgId}`} style={{ display: "block", width: "100%", maxHeight: 420, objectFit: "cover", borderRadius: 12, marginBottom: 12 }} />}
               {p.fileName && (
-                <div style={{ background: T.bg, border: `1px solid ${T.border}`, borderRadius: 10, padding: "12px 16px", marginBottom: 12, fontSize: 13, color: T.textSec, fontFamily: "'DM Sans',sans-serif" }}>📎 {p.fileName}</div>
+                <div style={{ background: T.bg, border: `1px solid ${T.border}`, borderRadius: 10, padding: "12px 16px", marginBottom: 12, fontSize: 13, color: T.textSec, fontFamily: "'DM Sans',sans-serif" }}>ðŸ“Ž {p.fileName}</div>
               )}
-              <div style={{ display: "flex", gap: 20 }}>
-                <span style={{ fontSize: 14, color: T.muted, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>❤️ {p.likes}</span>
-                <span style={{ fontSize: 14, color: T.muted, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>💬 Comment</span>
-                <span style={{ fontSize: 14, color: T.muted, cursor: "pointer", fontFamily: "'DM Sans',sans-serif" }}>🔗 Share</span>
-              </div>
+              <PostInteractions post={p} onUpdate={onUpdatePost} responseLabel="Comment" />
             </div>
           );
         })}
@@ -480,7 +597,7 @@ function CommunityPage({ posts }) {
   );
 }
 
-// ─── green targets ───
+// â”€â”€â”€ green targets â”€â”€â”€
 function GreenTargetsPage({ targets, onToggle, onAdd }) {
   const [newTarget, setNewTarget] = useState("");
   const done = targets.filter(t => t.done).length;
@@ -488,8 +605,8 @@ function GreenTargetsPage({ targets, onToggle, onAdd }) {
 
   return (
     <div style={{ maxWidth: 700, margin: "0 auto", padding: "28px 28px 60px" }}>
-      <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>🎯 Green Targets</h1>
-      <p style={{ fontSize: 15, color: T.textSec, fontFamily: "'DM Sans',sans-serif", marginBottom: 24 }}>Personal sustainability goals — check them off as you go</p>
+      <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>ðŸŽ¯ Green Targets</h1>
+      <p style={{ fontSize: 15, color: T.textSec, fontFamily: "'DM Sans',sans-serif", marginBottom: 24 }}>Personal sustainability goals â€” check them off as you go</p>
 
       {/* Progress */}
       <div style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 16, padding: "24px", marginBottom: 24, boxShadow: T.shadow }}>
@@ -518,7 +635,7 @@ function GreenTargetsPage({ targets, onToggle, onAdd }) {
                 background: t.done ? T.greenLight : "transparent",
                 display: "flex", alignItems: "center", justifyContent: "center",
                 fontSize: 14, color: T.green, flexShrink: 0, transition: "all .2s",
-              }}>{t.done && "✓"}</div>
+              }}>{t.done && "âœ“"}</div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 14, fontWeight: 500, color: t.done ? T.muted : T.text, fontFamily: "'DM Sans',sans-serif", textDecoration: t.done ? "line-through" : "none" }}>{t.text}</div>
               </div>
@@ -528,7 +645,7 @@ function GreenTargetsPage({ targets, onToggle, onAdd }) {
         })}
         {targets.length === 0 && (
           <div style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 14, padding: "36px 20px", textAlign: "center", boxShadow: T.shadow }}>
-            <div style={{ fontSize: 34, marginBottom: 10 }}>🎯</div>
+            <div style={{ fontSize: 34, marginBottom: 10 }}>ðŸŽ¯</div>
             <p style={{ color: T.textSec, fontSize: 14, fontFamily: "'DM Sans',sans-serif", margin: 0 }}>No green targets yet. Add your first target below.</p>
           </div>
         )}
@@ -546,7 +663,7 @@ function GreenTargetsPage({ targets, onToggle, onAdd }) {
   );
 }
 
-// ─── plant a tree ───
+// â”€â”€â”€ plant a tree â”€â”€â”€
 function PlantTreePage({ trees, onPlant, notify }) {
   const [location, setLocation] = useState("");
   const [species, setSpecies] = useState("");
@@ -562,16 +679,16 @@ function PlantTreePage({ trees, onPlant, notify }) {
 
   return (
     <div style={{ maxWidth: 700, margin: "0 auto", padding: "28px 28px 60px" }}>
-      <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>🌳 Plant a Tree Near You</h1>
+      <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>ðŸŒ³ Plant a Tree Near You</h1>
       <p style={{ fontSize: 15, color: T.textSec, fontFamily: "'DM Sans',sans-serif", marginBottom: 24 }}>Log your tree planting activities and track your green impact</p>
 
       {/* Stats */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 12, marginBottom: 24 }}>
         {[
-          { v: trees.length, l: "Trees Planted", i: "🌳", c: T.green },
-          { v: `${(trees.length * 22).toLocaleString()} kg`, l: "CO₂ Absorbed/Year", i: "💨", c: T.blue },
-          { v: `${trees.length * 100}L`, l: "Water Filtered/Year", i: "💧", c: "#0EA5E9" },
-          { v: `${Math.round(trees.length * 0.5)}`, l: "Wildlife Supported", i: "🐦", c: T.amber },
+          { v: trees.length, l: "Trees Planted", i: "ðŸŒ³", c: T.green },
+          { v: `${(trees.length * 22).toLocaleString()} kg`, l: "COâ‚‚ Absorbed/Year", i: "ðŸ’¨", c: T.blue },
+          { v: `${trees.length * 100}L`, l: "Water Filtered/Year", i: "ðŸ’§", c: "#0EA5E9" },
+          { v: `${Math.round(trees.length * 0.5)}`, l: "Wildlife Supported", i: "ðŸ¦", c: T.amber },
         ].map(s => (
           <div key={s.l} style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 14, padding: "20px 16px", textAlign: "center", boxShadow: T.shadow }}>
             <div style={{ fontSize: 24, marginBottom: 6 }}>{s.i}</div>
@@ -583,7 +700,7 @@ function PlantTreePage({ trees, onPlant, notify }) {
 
       {/* Plant form */}
       <div style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 16, padding: "24px", marginBottom: 24, boxShadow: T.shadow }}>
-        <h2 style={{ margin: "0 0 16px", fontSize: 18, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif" }}>🌱 Log a New Tree</h2>
+        <h2 style={{ margin: "0 0 16px", fontSize: 18, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif" }}>ðŸŒ± Log a New Tree</h2>
         <div style={{ marginBottom: 14 }}>
           <label style={{ display: "block", fontSize: 13, color: T.textSec, marginBottom: 6, fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }}>Location</label>
           <input value={location} onChange={e => setLocation(e.target.value)} placeholder="e.g. My backyard, School garden, Local park" style={{
@@ -599,7 +716,7 @@ function PlantTreePage({ trees, onPlant, notify }) {
           }} />
         </div>
         <Btn color={T.green} full onClick={handlePlant} disabled={!location.trim() || planting}>
-          {planting ? "Logging..." : "🌳 Plant This Tree"}
+          {planting ? "Logging..." : "ðŸŒ³ Plant This Tree"}
         </Btn>
       </div>
 
@@ -607,17 +724,17 @@ function PlantTreePage({ trees, onPlant, notify }) {
       <h2 style={{ fontSize: 18, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 14 }}>Your Tree Log</h2>
       {trees.length === 0 ? (
         <div style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 14, padding: "40px 20px", textAlign: "center", boxShadow: T.shadow }}>
-          <div style={{ fontSize: 36, marginBottom: 10 }}>🌱</div>
+          <div style={{ fontSize: 36, marginBottom: 10 }}>ðŸŒ±</div>
           <p style={{ color: T.textSec, fontSize: 14, fontFamily: "'DM Sans',sans-serif", margin: 0 }}>No trees planted yet. Log your first tree above!</p>
         </div>
       ) : (
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {[...trees].reverse().map(t => (
             <div key={t.id} style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 12, padding: "14px 18px", display: "flex", alignItems: "center", gap: 14, boxShadow: T.shadow }}>
-              <div style={{ width: 40, height: 40, borderRadius: 10, background: T.greenLight, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>🌳</div>
+              <div style={{ width: 40, height: 40, borderRadius: 10, background: T.greenLight, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>ðŸŒ³</div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 14, fontWeight: 600, color: T.text, fontFamily: "'DM Sans',sans-serif" }}>{t.species}</div>
-                <div style={{ fontSize: 13, color: T.textSec, fontFamily: "'DM Sans',sans-serif" }}>📍 {t.location}</div>
+                <div style={{ fontSize: 13, color: T.textSec, fontFamily: "'DM Sans',sans-serif" }}>ðŸ“ {t.location}</div>
               </div>
               <div style={{ fontSize: 12, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>{new Date(t.date).toLocaleDateString()}</div>
             </div>
@@ -628,7 +745,7 @@ function PlantTreePage({ trees, onPlant, notify }) {
   );
 }
 
-// ─── City Pulse AI ───
+// â”€â”€â”€ City Pulse AI â”€â”€â”€
 function CityPulsePage() {
   const [city, setCity] = useState("");
   const [loading, setLoading] = useState(false);
@@ -643,7 +760,7 @@ function CityPulsePage() {
         body: JSON.stringify({
           model: "claude-sonnet-4-6", max_tokens: 1000,
           system: `You are City Pulse AI, an environmental satellite data analyst. When given a city name, provide a structured environmental report using real satellite-derived data and estimates. Format your response EXACTLY as JSON with no backticks or extra text:
-{"city":"City Name","country":"Country","aqi":number,"aqiLabel":"Good/Moderate/Unhealthy","greenCover":number(percentage),"waterBodies":number(count),"avgTemp":"XX°C","co2Level":"XXX ppm","deforestation":"XX% change","ndvi":number(0-1 vegetation index),"urbanExpansion":"XX% in last decade","renewableEnergy":"XX%","biodiversity":"description","alerts":["alert1","alert2"],"satellites":["Sentinel-2","Landsat-9","MODIS","etc"],"summary":"2-3 sentence environmental summary"}
+{"city":"City Name","country":"Country","aqi":number,"aqiLabel":"Good/Moderate/Unhealthy","greenCover":number(percentage),"waterBodies":number(count),"avgTemp":"XXÂ°C","co2Level":"XXX ppm","deforestation":"XX% change","ndvi":number(0-1 vegetation index),"urbanExpansion":"XX% in last decade","renewableEnergy":"XX%","biodiversity":"description","alerts":["alert1","alert2"],"satellites":["Sentinel-2","Landsat-9","MODIS","etc"],"summary":"2-3 sentence environmental summary"}
 Use realistic data based on your knowledge of the city. Be specific and accurate.`,
           messages: [{ role: "user", content: `Environmental satellite data report for: ${city.trim()}` }],
         }),
@@ -663,7 +780,7 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
 
   return (
     <div style={{ maxWidth: 800, margin: "0 auto", padding: "28px 28px 60px" }}>
-      <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>🛰️ City Pulse AI</h1>
+      <h1 style={{ fontSize: 26, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>ðŸ›°ï¸ City Pulse AI</h1>
       <p style={{ fontSize: 15, color: T.textSec, fontFamily: "'DM Sans',sans-serif", marginBottom: 24 }}>Search any city to get satellite-based environmental data and analysis</p>
 
       {/* Search */}
@@ -672,13 +789,13 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
           flex: 1, padding: "14px 18px", background: T.card, border: `1px solid ${T.border}`,
           borderRadius: T.radiusSm, color: T.text, fontSize: 15, fontFamily: "'DM Sans',sans-serif", outline: "none", boxShadow: T.shadow,
         }} />
-        <Btn color={T.green} onClick={search} disabled={!city.trim() || loading}>{loading ? "Analyzing..." : "🛰️ Scan"}</Btn>
+        <Btn color={T.green} onClick={search} disabled={!city.trim() || loading}>{loading ? "Analyzing..." : "ðŸ›°ï¸ Scan"}</Btn>
       </div>
 
       {/* Loading */}
       {loading && (
         <div style={{ textAlign: "center", padding: "60px 20px" }}>
-          <div style={{ fontSize: 48, marginBottom: 16, animation: "pulse 1.5s infinite" }}>🛰️</div>
+          <div style={{ fontSize: 48, marginBottom: 16, animation: "pulse 1.5s infinite" }}>ðŸ›°ï¸</div>
           <div style={{ fontSize: 16, fontWeight: 600, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>Scanning satellite data...</div>
           <div style={{ fontSize: 14, color: T.textSec, fontFamily: "'DM Sans',sans-serif" }}>Analyzing Sentinel-2, Landsat-9, MODIS feeds</div>
         </div>
@@ -689,7 +806,7 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
         <div>
           {/* City header */}
           <div style={{ background: "linear-gradient(135deg, #0F1F0F, #1A3A1A)", borderRadius: 16, padding: "28px 24px", marginBottom: 20, color: "#fff" }}>
-            <div style={{ fontSize: 13, color: "#86EFAC", fontFamily: "'DM Sans',sans-serif", marginBottom: 6 }}>🛰️ Satellite Analysis</div>
+            <div style={{ fontSize: 13, color: "#86EFAC", fontFamily: "'DM Sans',sans-serif", marginBottom: 6 }}>ðŸ›°ï¸ Satellite Analysis</div>
             <h2 style={{ margin: "0 0 4px", fontSize: 26, fontWeight: 800, fontFamily: "'Outfit',sans-serif" }}>{result.city}</h2>
             <div style={{ fontSize: 14, color: "rgba(255,255,255,.6)", fontFamily: "'DM Sans',sans-serif" }}>{result.country}</div>
           </div>
@@ -697,12 +814,12 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
           {/* Key metrics */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 12, marginBottom: 20 }}>
             {[
-              { l: "Air Quality (AQI)", v: result.aqi, sub: result.aqiLabel, c: aqiColor(result.aqi), i: "🌬️" },
-              { l: "Green Cover", v: `${result.greenCover}%`, sub: "Vegetation", c: T.green, i: "🌿" },
-              { l: "NDVI Index", v: result.ndvi?.toFixed(2), sub: "Vegetation health", c: result.ndvi > 0.4 ? T.green : T.amber, i: "📡" },
-              { l: "Avg Temperature", v: result.avgTemp, sub: "Annual mean", c: T.amber, i: "🌡️" },
-              { l: "CO₂ Level", v: result.co2Level, sub: "Atmospheric", c: "#EF4444", i: "💨" },
-              { l: "Renewable Energy", v: result.renewableEnergy, sub: "Of total energy", c: T.green, i: "⚡" },
+              { l: "Air Quality (AQI)", v: result.aqi, sub: result.aqiLabel, c: aqiColor(result.aqi), i: "ðŸŒ¬ï¸" },
+              { l: "Green Cover", v: `${result.greenCover}%`, sub: "Vegetation", c: T.green, i: "ðŸŒ¿" },
+              { l: "NDVI Index", v: result.ndvi?.toFixed(2), sub: "Vegetation health", c: result.ndvi > 0.4 ? T.green : T.amber, i: "ðŸ“¡" },
+              { l: "Avg Temperature", v: result.avgTemp, sub: "Annual mean", c: T.amber, i: "ðŸŒ¡ï¸" },
+              { l: "COâ‚‚ Level", v: result.co2Level, sub: "Atmospheric", c: "#EF4444", i: "ðŸ’¨" },
+              { l: "Renewable Energy", v: result.renewableEnergy, sub: "Of total energy", c: T.green, i: "âš¡" },
             ].map(s => (
               <div key={s.l} style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 14, padding: "18px 16px", boxShadow: T.shadow }}>
                 <div style={{ fontSize: 20, marginBottom: 6 }}>{s.i}</div>
@@ -716,7 +833,7 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
           {/* More details */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 20 }}>
             <div style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 14, padding: "18px 20px", boxShadow: T.shadow }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 10 }}>📊 Land Use</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 10 }}>ðŸ“Š Land Use</div>
               {[
                 { l: "Water Bodies", v: result.waterBodies },
                 { l: "Urban Expansion", v: result.urbanExpansion },
@@ -729,13 +846,13 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
               ))}
             </div>
             <div style={{ background: T.card, border: `1px solid ${T.border}`, borderRadius: 14, padding: "18px 20px", boxShadow: T.shadow }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 10 }}>🛰️ Data Sources</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 10 }}>ðŸ›°ï¸ Data Sources</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 {(result.satellites || []).map(s => (
                   <span key={s} style={{ fontSize: 12, background: T.blueLight, color: T.blue, padding: "4px 10px", borderRadius: 6, fontFamily: "'DM Sans',sans-serif", fontWeight: 500 }}>{s}</span>
                 ))}
               </div>
-              <div style={{ marginTop: 12, fontSize: 14, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>🦋 Biodiversity</div>
+              <div style={{ marginTop: 12, fontSize: 14, fontWeight: 700, color: T.text, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>ðŸ¦‹ Biodiversity</div>
               <div style={{ fontSize: 13, color: T.textSec, fontFamily: "'DM Sans',sans-serif", lineHeight: 1.5 }}>{result.biodiversity}</div>
             </div>
           </div>
@@ -743,10 +860,10 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
           {/* Alerts */}
           {result.alerts?.length > 0 && (
             <div style={{ background: "#FEF2F2", border: "1px solid #FECACA", borderRadius: 14, padding: "18px 20px", marginBottom: 20 }}>
-              <div style={{ fontSize: 14, fontWeight: 700, color: "#DC2626", fontFamily: "'Outfit',sans-serif", marginBottom: 10 }}>⚠️ Environmental Alerts</div>
+              <div style={{ fontSize: 14, fontWeight: 700, color: "#DC2626", fontFamily: "'Outfit',sans-serif", marginBottom: 10 }}>âš ï¸ Environmental Alerts</div>
               {result.alerts.map((a, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-                  <span style={{ color: "#EF4444", fontSize: 12 }}>●</span>
+                  <span style={{ color: "#EF4444", fontSize: 12 }}>â—</span>
                   <span style={{ fontSize: 13, color: "#991B1B", fontFamily: "'DM Sans',sans-serif" }}>{a}</span>
                 </div>
               ))}
@@ -755,7 +872,7 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
 
           {/* Summary */}
           <div style={{ background: T.greenLight, border: `1px solid ${T.green}30`, borderRadius: 14, padding: "18px 20px" }}>
-            <div style={{ fontSize: 14, fontWeight: 700, color: T.greenDark, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>📋 Summary</div>
+            <div style={{ fontSize: 14, fontWeight: 700, color: T.greenDark, fontFamily: "'Outfit',sans-serif", marginBottom: 6 }}>ðŸ“‹ Summary</div>
             <p style={{ margin: 0, fontSize: 14, color: T.greenDark, lineHeight: 1.7, fontFamily: "'DM Sans',sans-serif" }}>{result.summary}</p>
           </div>
         </div>
@@ -763,7 +880,7 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
 
       {result?.error && (
         <div style={{ textAlign: "center", padding: "40px 20px", background: T.card, border: `1px solid ${T.border}`, borderRadius: 14 }}>
-          <div style={{ fontSize: 36, marginBottom: 10 }}>⚠️</div>
+          <div style={{ fontSize: 36, marginBottom: 10 }}>âš ï¸</div>
           <p style={{ color: T.textSec, fontSize: 14, fontFamily: "'DM Sans',sans-serif" }}>{result.summary}</p>
         </div>
       )}
@@ -771,9 +888,10 @@ Use realistic data based on your knowledge of the city. Be specific and accurate
   );
 }
 
-// ─── app ───
+// â”€â”€â”€ app â”€â”€â”€
 function App() {
-  const [page, setPage] = useState("home");
+  const requestedView = new URLSearchParams(window.location.search).get("view");
+  const [page, setPage] = useState(["community", "targets"].includes(requestedView) ? requestedView : "home");
   const [selectedSDG, setSelectedSDG] = useState(null);
   const [posts, setPosts] = useState([]);
   const [targets, setTargets] = useState([]);
@@ -784,7 +902,12 @@ function App() {
   useEffect(() => {
     const p = load("sdg-posts"), t = load("sdg-targets"), tr = load("sdg-trees");
     const realPosts = Array.isArray(p) ? p.filter(item => !/^s[1-5]$/.test(String(item.id))) : [];
-    const realTargets = Array.isArray(t) ? t.filter(item => !/^t[1-8]$/.test(String(item.id))) : [];
+    const savedTargets = Array.isArray(t) ? t.filter(item => !/^t[1-8]$/.test(String(item.id))) : [];
+    const defaultIds = new Set(EASY_GREEN_TARGETS.map(item => item.id));
+    const realTargets = [
+      ...EASY_GREEN_TARGETS.map(item => savedTargets.find(saved => saved.id === item.id) || item),
+      ...savedTargets.filter(item => !defaultIds.has(item.id)),
+    ];
     setPosts(realPosts); setTargets(realTargets); if (tr) setTrees(tr);
     save("sdg-posts", realPosts); save("sdg-targets", realTargets);
     setLoaded(true);
@@ -794,65 +917,45 @@ function App() {
 
   const handlePost = (post) => {
     const up = [post, ...posts]; setPosts(up); save("sdg-posts", up);
-    notify("Action shared! 🌱", "✅");
+    notify("Action shared! ðŸŒ±", "âœ…");
+  };
+
+  const handleUpdatePost = (id, changes) => {
+    const up = posts.map(post => post.id === id ? { ...post, ...changes } : post);
+    setPosts(up);
+    save("sdg-posts", up);
   };
 
   const handleToggleTarget = (id) => {
     const up = targets.map(t => t.id === id ? { ...t, done: !t.done } : t);
     setTargets(up); save("sdg-targets", up);
     const target = up.find(t => t.id === id);
-    if (target?.done) notify("Target completed!", "🎯");
+    if (target?.done) notify("Target completed!", "ðŸŽ¯");
   };
 
   const handleAddTarget = (text) => {
     const up = [...targets, { id: Date.now().toString(), text, done: false, sdg: 13 }];
     setTargets(up); save("sdg-targets", up);
-    notify("Target added!", "🎯");
+    notify("Target added!", "ðŸŽ¯");
   };
 
   const handlePlantTree = (tree) => {
     const up = [...trees, tree]; setTrees(up); save("sdg-trees", up);
-    notify(`${tree.species} planted at ${tree.location}!`, "🌳");
+    notify(`${tree.species} planted at ${tree.location}!`, "ðŸŒ³");
   };
 
   if (!loaded) return React.createElement('div', {style: {background: T.bg, minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center"}}, React.createElement('div', {style: {color: T.textSec, fontFamily: "'DM Sans',sans-serif"}}, 'Loading...'));
 
-  const navItems = [
-    { id: "home", label: "SDGs", icon: "🌍" },
-    { id: "community", label: "Community", icon: "👥" },
-    { id: "targets", label: "Green Targets", icon: "🎯" },
-    { id: "tree", label: "Plant a Tree", icon: "🌳", ext: "PlantHere.html" },
-    { id: "city", label: "City Pulse AI", icon: "🛰️", ext: "City_AI_Pulse_V5_Rainfall.html" },
-  ];
-
   return (
     <div style={{ background: T.bg, minHeight: "100vh" }}>
       {toast && <Toast msg={toast} onClose={() => setToast(null)} />}
-      <nav aria-label="SDG sections" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 24px", height: 60, background: "#fff", borderBottom: `1px solid ${T.border}`, position: "sticky", top: 60, zIndex: 90, boxShadow: "0 1px 3px rgba(0,0,0,.04)" }}>
-        <div onClick={() => { setPage("home"); setSelectedSDG(null); }} style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer" }}>
-          <span style={{ fontSize: 22 }}>🌍</span>
-          <span style={{ fontSize: 17, fontWeight: 800, color: T.text, fontFamily: "'Outfit',sans-serif" }}>SDG</span>
-          <span style={{ fontSize: 17, fontWeight: 800, color: T.green, fontFamily: "'Outfit',sans-serif" }}>Action</span>
-        </div>
-        <div style={{ display: "flex", gap: 2 }}>
-          {navItems.map(n => (
-            <button key={n.id} onClick={() => { if (n.ext) { window.open(n.ext, '_blank'); } else { setPage(n.id); setSelectedSDG(null); } }} style={{
-              background: page === n.id || (page === "sdg" && n.id === "home") ? T.greenLight : "transparent",
-              color: page === n.id || (page === "sdg" && n.id === "home") ? T.green : T.muted,
-              border: "none", borderRadius: 10, padding: "7px 14px", fontSize: 13, fontWeight: 600,
-              cursor: "pointer", fontFamily: "'DM Sans',sans-serif", display: "flex", alignItems: "center", gap: 5,
-            }}>{n.icon} {n.label}</button>
-          ))}
-        </div>
-        <div style={{ width: 80 }} />
-      </nav>
       {page === "home" && !selectedSDG && <HomePage onSelectSDG={(s) => { setSelectedSDG(s); setPage("sdg"); }} />}
-      {page === "sdg" && selectedSDG && <SDGPage sdg={selectedSDG} posts={posts} onPost={handlePost} onBack={() => { setPage("home"); setSelectedSDG(null); }} />}
-      {page === "community" && <CommunityPage posts={posts} />}
+      {page === "sdg" && selectedSDG && <SDGPage sdg={selectedSDG} posts={posts} onPost={handlePost} onUpdatePost={handleUpdatePost} onBack={() => { setPage("home"); setSelectedSDG(null); }} />}
+      {page === "community" && <CommunityPage posts={posts} onUpdatePost={handleUpdatePost} />}
       {page === "targets" && <GreenTargetsPage targets={targets} onToggle={handleToggleTarget} onAdd={handleAddTarget} />}
       <footer style={{ borderTop: `1px solid ${T.border}`, padding: "24px 28px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10, background: "#fff" }}>
-        <span style={{ fontSize: 13, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>🌍 SDG Action Platform © 2026</span>
-        <span style={{ fontSize: 13, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>Powered by Earth Vision AI</span>
+        <span style={{ fontSize: 13, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>ðŸŒ IPS Green Vision Â© 2026</span>
+        <span style={{ fontSize: 13, color: T.muted, fontFamily: "'DM Sans',sans-serif" }}>Created by Aayann K Jain Â· Indirapuram Public School</span>
       </footer>
     </div>
   );
